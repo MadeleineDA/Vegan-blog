@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6fff5;
+  color: #333;
+}
+
+/* NAVEGACIÓN SUPERIOR*/
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #104705;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #59ac48;
+  pointer-events: none;
+}
+
+.logo span {
+  color: #81e60e;
+  font-weight: lighter;
+}
+
+/*HERO (INTRODUCCIÓN)*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: linear-gradient(120deg, #7bc043 50%, #fff 50%);
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 40%;
+  padding: 0;
+  color: #333;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.hero-text .negro {
+  color: #000000;
+  font-weight: bold;
+  display: block;
+  font-weight: 900;
+}
+
+.hero-text .blanco {
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px 12px;
+  font-weight: 1000;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #2c2c2c;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.btn {
+  background: #000000;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #706c6c;
+}
+
+/*IMÁGENES PRINCIPALES*/
+.right-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-image img {
+  width: 100%;              
+  max-width: 600px;         
+  aspect-ratio: 1 / 1;      
+  object-fit: cover;        
+  border-radius: 50%;       
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease;
+}
+
+.miniatures {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.miniatures img {
+  width: 180px;
+  height: 180px;
+  border-radius: 70%;
+  border: 5px solid #7bc043;
+  object-fit: cover;
+  transform: rotate(-20deg);
+  
+}
+
+/* Sección general */
+.titulo-recetas {
+  font-size: 45px;
+  color: #000000;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+}
+
+.tarjetas-comida-vegana {
+  padding: 60px 40px;
+  background-color: #e1f8e1;
+}
+
+/* Título general */
+.tarjetas-comida-vegana .titulo-izquierda {
+  font-size: 2.2em;
+  color: #000000;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Contenedor en grid de 3x2 */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 30px;
+  justify-items: center;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  min-height: 400px;
+  text-align: justify;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de la tarjeta */
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Título de cada tarjeta */
+.tarjeta h3 {
+  font-size: 1.5em;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Texto descriptivo */
+.tarjeta p {
+  font-size: 1em;
+  color: #444;
+  line-height: 1.5;
+}
+
+.tarjeta p + p {
+  margin-top: 15px; 
+}
+
+/* SECCIÓN DE BENEFICIOS */
+.seccion-beneficios {
+  display: flex;
+  justify-content: center;
+  padding: 20px; /* un solo padding para simplificar */
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.contenedor-beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.lado-izquierdo {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.imagen-beneficio {
+  width: 120%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transform: translate(-200px, 200px);
+}
+
+/* Lado derecho sin tarjetas */
+.lado-derecho {
+  flex: 2;
+  min-width: 300px;
+}
+
+.titulo-general-derecha {
+  color: #59ac48;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+/* Texto en cuadrícula sin tarjeta */
+.grid-beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.bloque {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.bloque h3 {
+  margin-top: 0;
+  color: #000000;
+  font-size: 20px;
+}
+
+.bloque p {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #7cb342;
+  color: #000000;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: none; /* elimina cualquier borde superior indeseado */
+}
+
+.site-footer a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
