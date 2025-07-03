@@ -1,12 +1,10 @@
 body {
      margin: 0;
-    padding: 0 2rem;
+    padding: 0;
     min-height: 100vh;
-    background: #fff;
-    background-image: url("imag/fondo\ AE.jpg"); /* Cambia el nombre si tu imagen es otra */
-    background-size: cover;            /* Hace que la imagen cubra toda la pantalla */
-    background-position: center;       /* Centra la imagen */
-    background-repeat: no-repeat;
+    background-image: url("../imag/fondo AE.jpg");
+    background-size: cover;
+  
 }
 
 .contenido-principal {
@@ -14,34 +12,37 @@ body {
 }
 .tarjetas {
     display: flex;
-    flex-direction: row ;
     gap: 1rem;
-    margin-left: 2rem;
+    justify-content: center;
+    align-items: stretch; /* Igual altura */
 }
 .tarjeta {
-    background: #20c551;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    width: 220px;
+   background: #7cb342;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 300px;
+    min-height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+word-break: break-word;
 }
-.tarjeta h3 {
-    margin-top: 0;
-    text-align: center;
-        color: white;
-    font-size: xx-large;
-}
-
-.separador-tarjeta {
-    border: none;
-    border-top: 2px solid #59ac48;
-    margin: 0.5rem 0 1rem 0;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.7;
+.tarjeta h3, .tarjeta p {
+    width: 100%;
+    text-align: center; /* O 'center' si prefieres */
+    margin-bottom: 1rem;
 }
 
+.tarjeta p {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    color: #070707;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
 
 
 .contenedor-flex {
@@ -115,13 +116,15 @@ body {
     background: #3ae76e;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 1.5rem;
-    width: 320px;
-    min-height: 180px;
+    padding: 10px;
+    width: 300px;
+    min-height: 200px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 .cuadro-comparativo:nth-child(1) {
     background: #20c551;; /* Primer tono */
@@ -250,4 +253,67 @@ body {
 
 .site-footer a:hover {
   text-decoration: underline;
+}
+
+
+zoom al pasar el mouse por las tarjetas 
+.cuadro-comparativo {
+    /* ...código existente... */
+    transition: transform 0.3s ease;
+}
+
+.cuadro-comparativo:hover {
+    transform: scale(1.07); /* Ajusta el valor para más o menos zoom */
+    z-index: 2;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .contenedor-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cuadro-comparativo,
+  .tarjeta {
+    width: 90%;
+    min-width: 220px;
+    max-width: 350px;
+  }
+  .imagen-redonda,
+  .imagen-secundaria,
+  .imagen-terciaria {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-principal,
+  .titulo-secundario,
+  .titulo-terciario {
+    font-size: 2rem;
+  }
+  .tarjetas,
+  .comparativo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .botones-navegacion {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .navbar {
+    padding: 10px 5px;
+    flex-direction: column;
+  }
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
