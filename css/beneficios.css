@@ -4,44 +4,47 @@ body {
     min-height: 100vh;
     background-image: url("../imag/fondo AE.jpg");
     background-size: cover;
-  
+      font-family: 'Segoe UI', sans-serif;
 }
 
 .contenido-principal {
     flex: 1;
 }
-.tarjetas {
+.cuadro1 
+{
     display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: stretch; /* Igual altura */
+    align-items: stretch;
+    flex-wrap: wrap;
 }
-.tarjeta {
-   background: #7cb342;
-    border-radius: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    width: 300px;
-    min-height: 200px;
-    padding: 10px;
+
+.cuadro  {
+    background: #7cb342;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    width: 220px;
+    min-height: 150px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
-word-break: break-word;
+    word-break: break-word;
 }
-.tarjeta h3, .tarjeta p {
-    width: 100%;
-    text-align: center; /* O 'center' si prefieres */
-    margin-bottom: 1rem;
-}
-
-.tarjeta p {
-    flex: 1; /* Hace que el texto ocupe el espacio disponible */
-    color: #070707;
+.cuadro h3 {
     font-size: 1.1rem;
-    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.cuadro p {
+    font-size: 0.95rem;
     text-align: justify;
+}
+.cuadro :hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 
@@ -127,12 +130,12 @@ word-break: break-word;
  text-overflow: ellipsis;
 }
 .cuadro-comparativo:nth-child(1) {
-    background: #20c551;; /* Primer tono */
+    background: #fcfcfc;; /* Primer tono */
     color: #222;
 }
 
 .cuadro-comparativo:nth-child(2) {
-    background: #4fc729; /* Segundo tono */
+    background: #bfddb5; /* Segundo tono */
     color: #222;
 }
 .separador {
@@ -170,8 +173,8 @@ word-break: break-word;
 }
 
 .boton {
-    background: #3ae76e;
-    color: #222;
+    background: #0c0c0c;
+    color: #f3eeee;
     padding: 0.8rem 2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -268,52 +271,107 @@ zoom al pasar el mouse por las tarjetas
 }
 
 /* responsive */
-@media (max-width: 900px) {
-  .contenedor-flex {
-    flex-direction: column;
-    align-items: center;
+
+@media (max-width: 1200px) {
+  .contenedor-flex,
+  .comparativo,
+  .cuadro1 {
+    flex-wrap: wrap;
     gap: 1.5rem;
   }
-  .tarjetas {
+  .cuadro-comparativo,
+  .cuadro {
+    max-width: 320px;
+    min-width: 180px;
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contenedor-flex,
+  .comparativo,
+  .cuadro1 {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
   .cuadro-comparativo,
-  .tarjeta {
+  .cuadro {
     width: 90%;
-    min-width: 220px;
+    min-width: 150px;
     max-width: 350px;
+    margin: 0 auto;
   }
   .imagen-redonda,
   .imagen-secundaria,
   .imagen-terciaria {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    display: block;
   }
-}
-
-@media (max-width: 600px) {
   .titulo-principal,
   .titulo-secundario,
   .titulo-terciario {
     font-size: 2rem;
+    padding: 0 1rem;
   }
-  .tarjetas,
-  .comparativo {
+  .navbar,
+  .nav-menu {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    padding: 10px 5px;
+  }
+  .nav-menu li {
+    margin: 5px 0;
   }
   .botones-navegacion {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+  }
+  .boton {
+    width: 220px;             /* Ajusta el ancho según prefieras */
+    max-width: 90vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .cuadro-comparativo,
+  .cuadro {
+    width: 98%;
+    min-width: 100px;
+    max-width: 350px;
+    padding: 8px;
+  }
+  .imagen-redonda,
+  .imagen-secundaria,
+  .imagen-terciaria {
+    width: 110px;
+    height: 110px;
+  }
+  .titulo-principal,
+  .titulo-secundario,
+  .titulo-terciario {
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
   }
   .navbar {
-    padding: 10px 5px;
-    flex-direction: column;
+    padding: 5px 2px;
   }
   .nav-menu {
-    flex-direction: column;
     gap: 0.5rem;
+  }
+  .site-footer {
+    font-size: 12px;
+    padding: 10px 2px;
+  }
+  boton {
+    width: 98vw;
+    max-width: 300px;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
   }
 }

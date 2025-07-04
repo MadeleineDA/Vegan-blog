@@ -315,10 +315,9 @@ body {
   background-color: #7cb342;
   color: #000000;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
   font-size: 14px;
-  margin-top: 50px;
-  border-top: none; /* elimina cualquier borde superior indeseado */
+  border-top: none; 
 }
 
 .site-footer a {
@@ -329,4 +328,424 @@ body {
 
 .site-footer a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE      */
+@media (min-width: 375px) and (max-width: 576px) {
+  .navbar {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+   .logo {
+    order: -1; 
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu li {
+    margin: 5px 0;
+  
+  }
+
+  .nav-menu a {
+  font-size: 15px;
+  padding: 5px 10px;
+  }
+
+
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #7bc043 50%, #fff 50%);
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .right-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .main-image img {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .miniatures {
+    display: none;
+  }
+
+  .tarjetas-comida-vegana {
+    padding: 30px 20px;
+  }
+
+  .titulo-recetas,
+  .tarjetas-comida-vegana .titulo-izquierda {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .tarjeta {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.3em;
+  }
+
+  .tarjeta p {
+    font-size: 0.95em;
+  }
+
+  .seccion-beneficios {
+    padding: 20px 10px;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .contenedor-beneficios {
+    flex-direction: column;
+  }
+
+  .lado-izquierdo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .imagen-beneficio {
+    max-width: 250px;
+    width: 100%;
+    transform: translate(0, 0);
+  }
+
+  .lado-derecho {
+    padding: 0 10px;
+  }
+
+  .titulo-general-derecha {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .grid-beneficios {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bloque {
+    padding: 10px;
+  }
+
+  .bloque h3 {
+    font-size: 1.1em;
+  }
+
+  .bloque p {
+    font-size: 0.95em;
+  }
+
+  .site-footer {
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+}
+
+/* Tablas */
+@media (min-width: 768px) and (max-width: 992px) {
+.navbar {
+    padding: 15px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    margin: 5px 10px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 40px 30px;
+    background: linear-gradient(180deg, #7bc043 45%, #fff 45%);
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-text p {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+
+  .right-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .main-image img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .miniatures {
+    display: none;
+  }
+
+  /* TARJETAS DE COMIDA */
+  .tarjetas-comida-vegana {
+    padding: 40px 30px;
+  }
+
+  .titulo-recetas,
+  .tarjetas-comida-vegana .titulo-izquierda {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+
+  .tarjeta {
+    min-height: auto;
+  }
+
+  /* SECCIÓN DE BENEFICIOS */
+  .seccion-beneficios {
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .contenedor-beneficios {
+    flex-direction: column;
+  }
+
+  .lado-izquierdo {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .imagen-beneficio {
+    max-width: 400px;
+    width: 100%;
+    transform: none;
+  }
+
+  .lado-derecho {
+    padding: 0;
+  }
+
+  .titulo-general-derecha {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .grid-beneficios {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .bloque h3 {
+    font-size: 1.1em;
+  }
+
+  .bloque p {
+    font-size: 0.95em;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1440px) {
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 5%;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav-menu {
+  display: flex;
+  gap: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 17px;
+    padding: 5px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 60px 40px;
+    background: linear-gradient(120deg, #7bc043 53%, #ffffff 50%);
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-text h1 {
+    margin-top: 60px;
+    font-size: 3.5vw;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    transform: translateX(-20px);
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 14px 30px;
+  }
+
+  .right-content {
+    width: 45%;
+  }
+
+  .main-image img {
+    max-width: 400px;
+  }
+
+  .miniatures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -10px; 
+  transform: translateX(30px);
+}
+
+.miniatures img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+  /* TARJETAS COMIDA VEGANA */
+  .tarjetas-comida-vegana {
+    padding: 80px 60px;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+  }
+
+  .tarjeta {
+    min-height: 420px;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.6em;
+  }
+
+  .tarjeta p {
+    font-size: 1em;
+  }
+
+  /* BENEFICIOS */
+  .seccion-beneficios {
+    padding: 20px 60px;
+    position: relative;
+  min-height: 850px;
+  }
+
+  .imagen-beneficio {
+    max-width: 500px;
+    transform: translate(-55px, 350px);
+  }
+
+  .titulo-general-derecha {
+    font-size: 2.8em;
+    
+  }
+
+  .grid-beneficios {
+    gap: 50px;
+  }
+
+  .bloque h3 {
+    font-size: 1.2em;
+  }
+
+  .bloque p {
+    font-size: 1em;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 30px;
+    font-size: 15px;
+  }
 }
