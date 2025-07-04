@@ -1,0 +1,242 @@
+/* NAVEGACIÓN SUPERIOR*/
+body {
+     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffffff;
+    
+}
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #104705;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #59ac48;
+  pointer-events: none;
+}
+
+.logo span {
+  color: #81e60e;
+  font-weight: lighter;
+}
+
+.titulo-principal {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #0d0e0d;
+}
+/* seccion 1 */
+.seccion-comparativa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.imagen-principal {
+      width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.cuadros-comparativos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.cuadro-comparativo {
+    background: #7cb342;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex: 1 1 220px;      /* Hace que todos crezcan igual y mínimo 220px */
+    max-width: 300px;     /* Limita el ancho máximo */
+    min-width: 220px;     /* Limita el ancho mínimo */
+    min-height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+    word-break: break-word;
+     height: 250px; /* Ajusta según lo que necesites */
+}
+
+
+.cuadro-comparativo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.cuadro-comparativo p {
+    font-size: 0.95rem;
+    text-align: justify;
+}
+/* FOOTER */
+.site-footer {
+  background-color: #7cb342;
+  color: #000000;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: none; /* elimina cualquier borde superior indeseado */
+}
+
+.site-footer a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+zoom al pasar el mouse por las tarjetas 
+.cuadro-comparativo {
+    /* ...código existente... */
+    transition: transform 0.3s ease;
+}
+
+.cuadro-comparativo:hover {
+    transform: scale(1.07); /* Ajusta el valor para más o menos zoom */
+    z-index: 2;
+}
+
+.cuadro-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.cuadro-link:hover .cuadro-comparativo {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* responsive */
+ 
+@media (max-width: 900px) {
+  .seccion-comparativa,
+  .cuadros-comparativos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .cuadro-comparativo {
+    width: 90%;
+    min-width: 150px;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .imagen-principal {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-menu li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .cuadro-comparativo {
+    width: 98%;
+    min-width: 100px;
+    max-width: 350px;
+    padding: 8px;
+    height: auto;
+  }
+
+  .imagen-principal {
+    width: 110px;
+    height: 110px;
+  }
+
+  .titulo-principal {
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+  }
+
+  .navbar {
+    padding: 5px 2px;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  .site-footer {
+    font-size: 12px;
+    padding: 10px 2px;
+  }
+}
