@@ -625,8 +625,8 @@ body {
 @media (min-width: 1000px) and (max-width: 1440px) {
 .navbar {
   display: flex;
-  justify-content: space-between; 
   align-items: center;
+  justify-content: center;
   padding: 20px 5%;
   }
 
@@ -718,12 +718,12 @@ body {
   .seccion-beneficios {
     padding: 20px 60px;
     position: relative;
-  min-height: 850px;
   }
 
   .imagen-beneficio {
     max-width: 500px;
-    transform: translate(-55px, 350px);
+    align-items: center ;
+    justify-content: center;
   }
 
   .titulo-general-derecha {
